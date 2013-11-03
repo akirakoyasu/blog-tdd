@@ -6,8 +6,8 @@ import net.ak.blog.tdd.server.Main;
  * @author Akira Koyasu <mail@akirakoyasu.net>
  */
 public class ServerRunner {
-    public static void run() {
-        Main.main(new String[]{});
+    public static void start() {
+        Main.run();
     }
 
     public static void stop() {

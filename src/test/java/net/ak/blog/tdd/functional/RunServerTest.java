@@ -17,13 +17,13 @@ public class RunServerTest {
 
     @Test
     public void serverShowsFirstPage() {
-        ServerRunner.run();
+        ServerRunner.start();
         WebDriver driver = null;
         try {
             driver = new FirefoxDriver();
             driver.get(baseUrl);
-            WebElement title = driver.findElement(By.xpath("//title"));
-            assertThat(title.getText(), equalTo("Welcome!"));
+            WebElement heading = driver.findElement(By.xpath("//h1"));
+            assertThat(heading.getText(), equalTo("Welcome!"));
         } finally {
             if (driver != null) {
                 driver.quit();
